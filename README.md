@@ -121,9 +121,30 @@ CNN 失敗時自動降級到 Discord 人工輸入。
 ## 環境需求
 
 - Python 3.10+
-- Playwright（`playwright install chromium`）
+- Playwright（`playwright install chromium`）— 必要
 - Xvfb（Linux headless 環境）
-- 網路連線
+- 網路連線（須能連線到 `irs.thsrc.com.tw`）
+
+### 依賴衝突警告
+
+`playwright` 與 `pyppeteer` 有相依衝突（`pyee` 版本衝突）。兩者共存時可能需要在不同 virtualenv 分離。
+
+### 網站存取限制
+
+某些網路環境（例如高鐵站或企業內網）可能無法直接連線到 `irs.thsrc.com.tw`。若有 Cloudflare 挑戰，系統會等待最多 60 秒再視為逾時。
+
+## 已知限制
+
+- 驗證碼 CNN 模型目前 76% 準確率，建議同步設定 Discord Bot 以備人工輸入
+- 網站 anti-bot 偵測可能造成 30-60 秒的額外等待
+- 本工具僅供研究與個人自動化需求，請勿干擾高鐵官方服務
+
+## 維護紀錄
+
+- 2026-04-29：初始實作，完成 Tasks 2-10，pip 安裝完成，Playwright Chromium 已下載，單元測試全部通過（8/8）
+- 安裝後依賴衝突：`playwright` 升級到 1.58.0 取代 `pyppeteer` 的舊版 `pyee`
+- 驗證碼模型：`thsr_captcha_transfer.pth`（17MB，EfficientNet-B0 Transfer Learning，76.2% 準確率）
+- THC 網站直接瀏覽器存取的網路穩定性待驗證（集團網路可能有限制）
 
 ## 注意事項
 

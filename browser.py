@@ -89,7 +89,7 @@ class BrowserManager:
         if self._page is None:
             raise BrowserError("No page. Call new_page() first.")
         logger.info("Navigating to THSR booking page...")
-        await self._page.goto(THSR_URL, wait_until="networkidle2", timeout=timeout)
+        await self._page.goto(THSR_URL, wait_until="networkidle", timeout=timeout)
         # Give Cloudflare challenge time to resolve
         await asyncio.sleep(5)
         try:
