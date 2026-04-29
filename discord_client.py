@@ -10,7 +10,7 @@ from typing import List
 
 import requests
 
-from .config import BookingResult, Train
+from thsr_auto_book.config import BookingResult, Train
 
 logger = logging.getLogger("thsr_auto_book.discord")
 

@@ -18,13 +18,13 @@ sys.path.insert(0, "/home/w/.openclaw/workspace")
 from dotenv import load_dotenv
 load_dotenv()
 
-from .browser import BrowserManager
-from .book import THSRBooker
-from .config import QueryConfig, Train
-from .discord_client import send_booking_result, send_captcha_request, send_message, send_train_list, send_status
-from .exceptions import BookingStepError, CaptchaError, CaptchaTimeoutError, THSRBookingError
-from .monitor import monitor_loop
-from .search import THSRSearcher
+from thsr_auto_book.browser import BrowserManager
+from thsr_auto_book.book import THSRBooker
+from thsr_auto_book.config import QueryConfig, Train
+from thsr_auto_book.discord_client import send_booking_result, send_captcha_request, send_message, send_train_list, send_status
+from thsr_auto_book.exceptions import BookingStepError, CaptchaError, CaptchaTimeoutError, THSRBookingError
+from thsr_auto_book.monitor import monitor_loop
+from thsr_auto_book.search import THSRSearcher
 
 logging.basicConfig(
     level=logging.INFO,

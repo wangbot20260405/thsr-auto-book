@@ -12,9 +12,9 @@ from typing import Optional
 
 from playwright.async_api import Page
 
-from .browser import BrowserManager, catch_exception
-from .config import BookingResult, QueryConfig
-from .exceptions import BookingStepError, CaptchaTimeoutError
+from thsr_auto_book.browser import BrowserManager, catch_exception
+from thsr_auto_book.config import BookingResult, QueryConfig
+from thsr_auto_book.exceptions import BookingStepError, CaptchaTimeoutError
 
 logger = logging.getLogger("thsr_auto_book.book")
 

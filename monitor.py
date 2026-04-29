@@ -6,10 +6,10 @@ from __future__ import annotations
 import asyncio
 import logging
 
-from .browser import BrowserManager
-from .config import QueryConfig, Train
-from .discord_client import send_status
-from .search import THSRSearcher
+from thsr_auto_book.browser import BrowserManager
+from thsr_auto_book.config import QueryConfig, Train
+from thsr_auto_book.discord_client import send_status
+from thsr_auto_book.search import THSRSearcher
 
 logger = logging.getLogger("thsr_auto_book.monitor")
 

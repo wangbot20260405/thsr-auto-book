@@ -2,7 +2,7 @@
 Tests for config.py — QueryConfig, Train, BookingResult validation.
 """
 import pytest
-from config import BookingResult, QueryConfig, Train
+from thsr_auto_book.config import BookingResult, QueryConfig, Train
 
 
 def test_query_config_validate_ok():

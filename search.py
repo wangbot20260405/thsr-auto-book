@@ -9,9 +9,9 @@ from typing import List
 
 from playwright.async_api import Page
 
-from .browser import BrowserManager, catch_exception
-from .config import QueryConfig, Train
-from .exceptions import BookingStepError, NetworkError
+from thsr_auto_book.browser import BrowserManager, catch_exception
+from thsr_auto_book.config import QueryConfig, Train
+from thsr_auto_book.exceptions import BookingStepError, NetworkError
 
 logger = logging.getLogger("thsr_auto_book.search")
 

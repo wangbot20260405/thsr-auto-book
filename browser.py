@@ -13,7 +13,7 @@ from typing import Optional
 
 from playwright.async_api import async_playwright, Browser, Page
 
-from .exceptions import BrowserError, CloudflareChallengeError
+from thsr_auto_book.exceptions import BrowserError, CloudflareChallengeError
 
 logger = logging.getLogger("thsr_auto_book.browser")
 
@@ -44,7 +44,7 @@ def catch_exception(func):
             import traceback
             logger.exception("Exception in %s.%s", func.__module__, func.__name__)
             path = await self.take_screenshot()
-            from .exceptions import BookingStepError
+            from thsr_auto_book.exceptions import BookingStepError
             raise BookingStepError(
                 step=func.__name__,
                 message=f"{type(exc).__name__}: {exc}",
