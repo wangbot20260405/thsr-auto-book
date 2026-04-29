@@ -1,0 +1,30 @@
+# Bytecompile
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Virtualenv
+venv/
+.venv/
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Screenshots
+thsr-screenshot-*/
+
+# Logs
+*.log
+
+# Playwright
+.playwright/
